@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Coding Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .task {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #666;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+
+    .result {
+      background-color: #e8f5e9;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #4CAF50;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JavaScript Coding Tasks Assignment</h1>
+
+  <div class="task">
+    <h2>Task 1: Variable Declaration</h2>
+    <div id="task1"></div>
+  </div>
+
+  <div class="task">
+    <h2>Task 2: Full Name (Alert)</h2>
+    <div id="task2"></div>
+  </div>
+
+  <div class="task">
+    <h2>Task 3: addMe Function</h2>
+    <div id="task3"></div>
+  </div>
+
+  <div class="task">
+    <h2>Task 4: Cat Age Calculator</h2>
+    <div id="task4"></div>
+  </div>
+
+  <script>
+    // TASK 1
+    let firstName = "Moe", lastName = "Adam", age = 52;
+    document.getElementById('task1').innerHTML = `
+            <div class="result">
+                firstName: "${firstName}"<br>
+                lastName: "${lastName}"<br>
+                age: ${age}
+            </div>
+        `;
+
+    // TASK 2
+    let first_name = "Mike";
+    let last_name = "Douglas";
+    let fullname = first_name + " " + last_name;
+    alert(fullname);
+    document.getElementById('task2').innerHTML = `
+            <div class="result">
+                Full Name: ${fullname}<br>
+                (An alert was also displayed)
+            </div>
+        `;
+
+    // TASK 3
+    let total = 0;
+    function addMe(x) {
+      total += x;
+    }
+    addMe(5);
+    addMe(10);
+    addMe(15);
+    document.getElementById('task3').innerHTML = `
+            <div class="result">
+                Called addMe(5), addMe(10), addMe(15)<br>
+                Total: ${total}
+            </div>
+        `;
+
+    // TASK 4
+    function calculateCatAge(humanAge) {
+      let catAge = humanAge * 7;
+      let message = "Your cat is " + catAge + " years old in cat years!";
+      return message;
+    }
+
+    let result1 = calculateCatAge(2);
+    let result2 = calculateCatAge(5);
+    let result3 = calculateCatAge(10);
+
+    document.getElementById('task4').innerHTML = `
+            <div class="result">
+                ${result1}<br>
+                ${result2}<br>
+                ${result3}
+            </div>
+        `;
+  </script>
+</body>
+
+</html>
